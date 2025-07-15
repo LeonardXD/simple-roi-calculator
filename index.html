@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNL Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>PNL Calculator</h1>
+        <form id="pnl-form">
+            <div class="input-group">
+                <label for="entry-price">Entry Price</label>
+                <input type="number" id="entry-price" step="any" required>
+            </div>
+            <div class="input-group">
+                <label for="exit-price">Exit Price</label>
+                <input type="number" id="exit-price" step="any" required>
+            </div>
+            <div class="input-group">
+                <label for="margin">Margin</label>
+                <input type="number" id="margin" step="any" required>
+            </div>
+            <div class="input-group">
+                <label for="leverage">Leverage</label>
+                <input type="number" id="leverage" step="any" required>
+            </div>
+            <div class="input-group">
+                <label>Position</label>
+                <div class="radio-group">
+                    <input type="radio" id="long" name="position" value="long" checked>
+                    <label for="long">Long</label>
+                    <input type="radio" id="short" name="position" value="short">
+                    <label for="short">Short</label>
+                </div>
+            </div>
+            </form>
+        <div id="result-container">
+            <h2>PNL: <span id="pnl-result"></span> (<span id="roi-result"></span>)</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
